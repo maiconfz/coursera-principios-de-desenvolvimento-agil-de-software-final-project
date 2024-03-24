@@ -1,4 +1,4 @@
-@startuml Diagrama de classes
+@startuml
 
 class Leitor {
     - nome: String
