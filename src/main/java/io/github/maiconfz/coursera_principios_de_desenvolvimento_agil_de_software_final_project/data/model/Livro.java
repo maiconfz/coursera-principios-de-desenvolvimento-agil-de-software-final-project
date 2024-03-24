@@ -1,5 +1,6 @@
 package io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,11 +21,10 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titulo;
-    private String descricao;
     private String autor;
-    private String editora;
-    private int ano;
-    private int quantidadePaginas;
-    @ManyToOne
+    private int anoPublicacao;
+    @Column(nullable = false)
+    private int numeroPaginas;
+    @ManyToOne(optional = false)
     private Estilo estilo;
 }
