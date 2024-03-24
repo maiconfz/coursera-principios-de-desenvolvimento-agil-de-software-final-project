@@ -1,0 +1,13 @@
+@startgantt
+saturday are closed
+sunday are closed
+
+[Sprint 0] requires 1 week
+[Sprint 1] requires 2 week
+[Sprint 2] requires 2 week
+
+Project starts 2024-03-25
+[Sprint 0] starts D+0
+[Sprint 1] starts at [Sprint 0]'s end
+[Sprint 2] starts at [Sprint 1]'s end
+@endgantt
