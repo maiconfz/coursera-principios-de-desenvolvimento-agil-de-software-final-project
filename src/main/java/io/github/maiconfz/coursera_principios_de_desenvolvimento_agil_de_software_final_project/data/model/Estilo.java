@@ -1,4 +1,4 @@
-package io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.model;
+package io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @Entity
-public class Trofeu {
+public class Estilo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +23,7 @@ public class Trofeu {
     @Column(nullable = false, unique = true)
     private String nome;
 
-    public Trofeu(String nome) {
+    public Estilo(String nome) {
         this.nome = nome;
     }
 }

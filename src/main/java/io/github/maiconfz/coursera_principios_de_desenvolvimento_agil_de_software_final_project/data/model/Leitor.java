@@ -1,4 +1,4 @@
-package io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.model;
+package io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model;
 
 import java.util.List;
 

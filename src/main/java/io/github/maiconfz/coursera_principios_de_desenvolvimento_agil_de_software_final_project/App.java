@@ -1,14 +1,14 @@
-package io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject;
+package io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.model.Estilo;
-import io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.model.Trofeu;
-import io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.repo.EstiloRepository;
-import io.github.maiconfz.courseraprincipiosdedesenvolvimentoagildesoftwarefinalproject.data.repo.TrofeuRepository;
+import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model.Estilo;
+import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model.Trofeu;
+import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.repo.EstiloRepository;
+import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.repo.TrofeuRepository;
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
