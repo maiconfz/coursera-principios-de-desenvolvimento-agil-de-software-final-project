@@ -1,0 +1,38 @@
+@startuml Diagrama de classes
+
+class Leitor {
+    - nome: String
+    - email: String
+    - senha: String
+    - pontos: int
+    - livrosLidos: List<Livro>
+    - trofeusConquistados: List<Trofeu>
+}
+
+class Livro {
+    - titulo: String
+    - descricao: String
+    - autor: String
+    - editora: String
+    - ano: int
+    - quantidadePaginas: int
+    - estilo: Estilo
+}
+
+class Estilo {
+    - nome: String
+}
+
+class Trofeu {
+    - nome: String
+}
+
+Leitor "0..*" o-- "0..*" Livro : Livros lidos
+Leitor "0..*" o-- "0.." Trofeu : Troféus conquistados
+Livro "0..*" o-- "1" Estilo : Estilo do livro
+
+
+
+
+
+@enduml
