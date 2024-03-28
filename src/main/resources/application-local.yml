@@ -6,6 +6,15 @@ spring:
             quiet-period: '1s'      
             additional-paths:      
                 - src/main/java/
+                - src/main/resources/templates/
+    thymeleaf:        
+        cache: 'false'        
+        prefix: file:src/main/resources/templates/
+    web:    
+        resources:      
+            static-locations: file:src/main/resources/static/, classpath:/static/      
+            cache:        
+                period: 0
 
 logging:
     level:
