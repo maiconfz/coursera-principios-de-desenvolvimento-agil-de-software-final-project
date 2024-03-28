@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <div th:replace="/fragments/head"></div>
+    <div th:replace="~{/fragments/template-default :: head}"></div>
 </head>
 <body>
-    <div th:replace="/fragments/header"></div>
+    <div th:replace="~{/fragments/template-default :: header}"></div>
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
@@ -25,10 +25,7 @@
                 </form>
             </div>
         </div>
-
-        <div th:replace="/fragments/footer"></div>
     </div>
-
-
+    <div th:replace="~{/fragments/template-default :: footer}"></div>
 </body>
 </html>
