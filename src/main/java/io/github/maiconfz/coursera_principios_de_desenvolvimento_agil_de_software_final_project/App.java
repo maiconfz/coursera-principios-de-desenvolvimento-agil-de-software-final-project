@@ -89,7 +89,7 @@ public class App {
 				.findByNome(Estilo.EstiloEnum.SUSPENSE_PSICOLOGICO.getNome()).get();
 
 		livroRepository.save(Livro.builder()
-				.titulo("To Kill a Mockingbird")
+				.titulo("O Sol é para Todos")
 				.autor("Harper Lee")
 				.anoPublicacao(1960)
 				.numeroPaginas(281)
@@ -105,7 +105,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("The Great Gatsby")
+				.titulo("O Grande Gatsby")
 				.autor("F. Scott Fitzgerald")
 				.anoPublicacao(1925)
 				.numeroPaginas(180)
@@ -113,7 +113,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("Pride and Prejudice")
+				.titulo("Orgulho e Preconceito")
 				.autor("Jane Austen")
 				.anoPublicacao(1813)
 				.numeroPaginas(279)
@@ -121,7 +121,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("To the Lighthouse")
+				.titulo("Ao Farol")
 				.autor("Virginia Woolf")
 				.anoPublicacao(1927)
 				.numeroPaginas(209)
@@ -137,7 +137,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("The Lord of the Rings")
+				.titulo("O Senhor dos Anéis")
 				.autor("J.R.R. Tolkien")
 				.anoPublicacao(1954)
 				.numeroPaginas(1178)
@@ -145,7 +145,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("War and Peace")
+				.titulo("Guerra e Paz")
 				.autor("Leo Tolstoy")
 				.anoPublicacao(1869)
 				.numeroPaginas(1225)
@@ -153,7 +153,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("Crime and Punishment")
+				.titulo("Crime e Castigo")
 				.autor("Fyodor Dostoevsky")
 				.anoPublicacao(1866)
 				.numeroPaginas(671)
@@ -161,7 +161,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("The Catcher in the Rye")
+				.titulo("O Apanhador no Campo de Centeio")
 				.autor("J.D. Salinger")
 				.anoPublicacao(1951)
 				.numeroPaginas(277)
@@ -169,7 +169,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("The Hobbit")
+				.titulo("O Hobbit")
 				.autor("J.R.R. Tolkien")
 				.anoPublicacao(1937)
 				.numeroPaginas(310)
@@ -177,7 +177,7 @@ public class App {
 				.build());
 
 		livroRepository.save(Livro.builder()
-				.titulo("The Alchemist")
+				.titulo("O Alquimista")
 				.autor("Paulo Coelho")
 				.anoPublicacao(1988)
 				.numeroPaginas(197)
