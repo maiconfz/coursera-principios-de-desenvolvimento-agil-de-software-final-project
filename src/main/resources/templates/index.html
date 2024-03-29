@@ -10,8 +10,19 @@
     <div th:replace="~{/fragments/template-default :: header}"></div>
     <div class="container">
         <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <h2 class="text-center mb-4">Hello World!</h2>
+            <div class="col-md-9">
+                <h2 class="text-center mb-4">Livros</h2>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" th:each="livro : ${livros}"><a th:href="@{'/livro/' + ${livro.id}}" th:title="'Visualizar livro ' + ${livro.titulo}" th:text="${livro.titulo}">Título do livro</a></li>
+                    </ul>
+                  </div>
+                <ul class="list-unstyled">
+                    
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="text-center mb-4">Ranking</h2>
             </div>
         </div>
 
