@@ -13,13 +13,28 @@
             <div class="col-md-9">
                 <h2 class="text-center mb-4">Livros</h2>
                 <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" th:each="livro : ${livros}"><a th:href="@{'/livro/' + ${livro.id}}" th:title="'Visualizar livro ' + ${livro.titulo}" th:text="${livro.titulo}">Título do livro</a></li>
-                    </ul>
-                  </div>
-                <ul class="list-unstyled">
-                    
-                </ul>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <caption hidden>Tabela de livros</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Descrição</th>
+                                    <th scope="col">Autor</th>
+                                    <th scope="col">Ano</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="livro : ${livros}">
+                                    <td><a th:href="@{'/livro/' + ${livro.id}}" th:title="'Ver detalhes do livro ' + ${livro.titulo}" th:text="${livro.titulo}">Título do livro</a></td>
+                                    <td th:text="${livro.descricao}">Descrição</td>
+                                    <td th:text="${livro.autor}">Autor do livro</td>
+                                    <td th:text="${livro.ano}">Ano do livro</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3">
                 <h2 class="text-center mb-4">Ranking</h2>

@@ -91,97 +91,110 @@ public class App {
 		livroRepository.save(Livro.builder()
 				.titulo("O Sol é para Todos")
 				.autor("Harper Lee")
-				.anoPublicacao(1960)
+				.ano(1960)
 				.numeroPaginas(281)
 				.estilo(estiloClassico)
+				.descricao("Um clássico da literatura que aborda temas como racismo e injustiça social.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("1984")
 				.autor("George Orwell")
-				.anoPublicacao(1949)
+				.ano(1949)
 				.numeroPaginas(328)
 				.estilo(estiloDistopico)
+				.descricao("Uma distopia clássica que retrata um futuro sombrio e opressivo, onde a liberdade individual é suprimida.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("O Grande Gatsby")
 				.autor("F. Scott Fitzgerald")
-				.anoPublicacao(1925)
+				.ano(1925)
 				.numeroPaginas(180)
 				.estilo(estiloClassico)
+				.descricao("Um clássico da literatura americana que retrata a decadência da sociedade durante a era do jazz.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("Orgulho e Preconceito")
 				.autor("Jane Austen")
-				.anoPublicacao(1813)
+				.ano(1813)
 				.numeroPaginas(279)
 				.estilo(estiloRomance)
+				.descricao("Um clássico da literatura inglesa que retrata a sociedade do século XIX, abordando temas como amor, casamento e preconceito.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("Ao Farol")
 				.autor("Virginia Woolf")
-				.anoPublicacao(1927)
+				.ano(1927)
 				.numeroPaginas(209)
 				.estilo(estiloModernista)
+				.descricao("Um romance modernista que explora a complexidade da mente humana e as mudanças sociais do início do século XX.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("Moby-Dick")
 				.autor("Herman Melville")
-				.anoPublicacao(1851)
+				.ano(1851)
 				.numeroPaginas(585)
 				.estilo(estiloAventura)
+				.descricao("Um clássico da literatura que narra a história do capitão Ahab em busca da baleia branca.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("O Senhor dos Anéis")
 				.autor("J.R.R. Tolkien")
-				.anoPublicacao(1954)
+				.ano(1954)
 				.numeroPaginas(1178)
 				.estilo(estiloFantasia)
+				.descricao("Uma épica história de fantasia que se passa na Terra Média, onde um pequeno hobbit chamado Frodo embarca em uma jornada perigosa para destruir um poderoso anel.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("Guerra e Paz")
 				.autor("Leo Tolstoy")
-				.anoPublicacao(1869)
+				.ano(1869)
 				.numeroPaginas(1225)
 				.estilo(estiloFiccaoHistorica)
+				.descricao(
+						"Um romance histórico que retrata a vida de várias famílias aristocráticas russas durante o período das guerras napoleônicas.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("Crime e Castigo")
 				.autor("Fyodor Dostoevsky")
-				.anoPublicacao(1866)
+				.ano(1866)
 				.numeroPaginas(671)
 				.estilo(estiloSuspensePsicologico)
+				.descricao("Um clássico da literatura russa que explora a mente de um jovem estudante que comete um assassinato e lida com as consequências psicológicas de seus atos.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("O Apanhador no Campo de Centeio")
 				.autor("J.D. Salinger")
-				.anoPublicacao(1951)
+				.ano(1951)
 				.numeroPaginas(277)
 				.estilo(estiloClassico)
+				.descricao("Um romance que retrata a jornada de um adolescente rebelde chamado Holden Caulfield, enquanto ele lida com a alienação e a busca por significado na sociedade.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("O Hobbit")
 				.autor("J.R.R. Tolkien")
-				.anoPublicacao(1937)
+				.ano(1937)
 				.numeroPaginas(310)
 				.estilo(estiloFantasia)
+				.descricao("Uma aventura encantadora que segue Bilbo Bolseiro, um hobbit relutante, em sua jornada para ajudar um grupo de anões a recuperar seu tesouro roubado por um dragão.")
 				.build());
 
 		livroRepository.save(Livro.builder()
 				.titulo("O Alquimista")
 				.autor("Paulo Coelho")
-				.anoPublicacao(1988)
+				.ano(1988)
 				.numeroPaginas(197)
 				.estilo(estiloRomance)
+				.descricao("Uma história inspiradora sobre um jovem pastor que embarca em uma jornada em busca de seu tesouro pessoal e descobre lições valiosas sobre o significado da vida.")
 				.build());
 	}
 

@@ -22,9 +22,10 @@ public class Livro {
     private Long id;
     private String titulo;
     private String autor;
-    private int anoPublicacao;
+    private int ano;
     @Column(nullable = false)
     private int numeroPaginas;
     @ManyToOne(optional = false)
     private Estilo estilo;
+    private String descricao;
 }
