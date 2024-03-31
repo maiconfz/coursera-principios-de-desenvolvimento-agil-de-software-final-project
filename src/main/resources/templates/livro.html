@@ -17,7 +17,10 @@
                         <div class="row">
                             <div class="col"><h3 th:text="${livro.titulo}">Título</h3></div>
                             <div class="col text-end">
-                                <a class="btn" th:classappend="${livro.lido} ? 'btn-default' : 'btn-primary'" role="button" th:href="@{/livro/marcar-como-lido/{id}(id=${livro.id})}" th:text="${livro.lido} ? 'Lido' : 'Marcar livro como lido'" th:title="${livro.lido} ? 'Desmarcar livro como lido' : 'Marcar livro como lido'">Marcar livro como lido</a>
+                                <div th:switch="${livro.lido}">
+                                    <a th:case="false" class="btn btn-primary" role="button" th:href="@{/livro/marcar-como-lido/{id}(id=${livro.id})}">Marcar livro como lido</a>
+                                    <a th:case="true" class="btn btn-default" role="button" th:href="@{/livro/desmarcar-como-lido/{id}(id=${livro.id})}" title="Desmarcar livro como lido">Lido</a>
+                                </div>
                             </div>
                         </div>
                     </div>

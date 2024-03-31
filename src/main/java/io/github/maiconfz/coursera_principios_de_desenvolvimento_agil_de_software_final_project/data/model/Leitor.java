@@ -32,4 +32,8 @@ public class Leitor {
     @ManyToMany
     @JoinTable(name = "leitor_trofeu")
     private List<Trofeu> trofeusConquistados;
+
+    public boolean isNew() {
+        return this.id == null;
+    }
 }
