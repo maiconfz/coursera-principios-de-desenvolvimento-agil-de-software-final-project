@@ -28,4 +28,5 @@ public class Livro {
     @ManyToOne(optional = false)
     private Estilo estilo;
     private String descricao;
+    private transient Boolean lido;
 }

@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title th:text="'Livro' + ${livro.titulo}">Livro</title>
     <div th:replace="~{/fragments/template-default :: head}"></div>
 </head>
 <body>
     <div th:replace="~{/fragments/template-default :: header}"></div>
     <div class="container">
-        <div class="row justify-content-center mt-5">
+        <div class="row mt-5">
             <div class="col">
                 <h2 class="mb-4">Livro</h2>
                 <div class="card">
                     <div class="card-header">
-                        <h3 th:text="${livro.titulo}">Título</h3>
+                        <div class="row">
+                            <div class="col"><h3 th:text="${livro.titulo}">Título</h3></div>
+                            <div class="col text-end">
+                                <a class="btn" th:classappend="${livro.lido} ? 'btn-default' : 'btn-primary'" role="button" th:href="@{/livro/marcar-como-lido/{id}(id=${livro.id})}" th:text="${livro.lido} ? 'Lido' : 'Marcar livro como lido'" th:title="${livro.lido} ? 'Desmarcar livro como lido' : 'Marcar livro como lido'">Marcar livro como lido</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <p><strong>Descrição: </strong><span th:text="${livro.descricao}">descrição</span></p>
                         <p><strong>Autor: </strong><span th:text="${livro.autor}">autor</span></p>
                         <p><strong>Ano: </strong><span th:text="${livro.ano}">ano</span></p>
+                        <p><strong>Número de páginas: </strong><span th:text="${livro.numeroPaginas}">número de páginas</span></p>
+                        <p><strong>Estilo: </strong><span th:text="${livro.estilo.nome}">estilo</span></p>
                     </div>
                 </div>
             </div>
