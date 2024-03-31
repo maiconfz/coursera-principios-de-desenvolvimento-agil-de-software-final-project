@@ -4,7 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model.Estilo;
 import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model.Leitor;
@@ -27,11 +27,11 @@ public class App {
 	@Bean
 	public CommandLineRunner initData(EstiloRepository estiloRepository, TrofeuRepository trofeuRepository,
 			LeitorRepository leitorRepository, LivroRepository livroRepository,
-			BCryptPasswordEncoder bCryptPasswordEncoder) {
+			PasswordEncoder passwordEncoder) {
 		return args -> {
 			initEstilos(estiloRepository);
 			initTrofeus(estiloRepository, trofeuRepository);
-			initLeitores(leitorRepository, bCryptPasswordEncoder);
+			initLeitores(leitorRepository, passwordEncoder);
 			initLivros(estiloRepository, livroRepository);
 
 			log.debug("Estilos e troféus iniciais criados com sucesso.");
@@ -43,7 +43,7 @@ public class App {
 	}
 
 	@SuppressWarnings("null")
-	private void initLeitores(LeitorRepository leitorRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+	private void initLeitores(LeitorRepository leitorRepository, PasswordEncoder passwordEncoder) {
 		String[] names = { "Emma", "Liam", "Olivia", "Noah", "Ava", "Isabella", "Sophia", "Mia", "Charlotte",
 				"Amelia" };
 
@@ -51,7 +51,7 @@ public class App {
 			leitorRepository.save(Leitor.builder()
 					.nome(name)
 					.email(name.toLowerCase() + "@gmail.com")
-					.senha(bCryptPasswordEncoder.encode(name.toLowerCase()))
+					.senha(passwordEncoder.encode(name.toLowerCase()))
 					.pontos(0)
 					.build());
 		}
@@ -103,7 +103,8 @@ public class App {
 				.ano(1949)
 				.numeroPaginas(328)
 				.estilo(estiloDistopico)
-				.descricao("Uma distopia clássica que retrata um futuro sombrio e opressivo, onde a liberdade individual é suprimida.")
+				.descricao(
+						"Uma distopia clássica que retrata um futuro sombrio e opressivo, onde a liberdade individual é suprimida.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -112,7 +113,8 @@ public class App {
 				.ano(1925)
 				.numeroPaginas(180)
 				.estilo(estiloClassico)
-				.descricao("Um clássico da literatura americana que retrata a decadência da sociedade durante a era do jazz.")
+				.descricao(
+						"Um clássico da literatura americana que retrata a decadência da sociedade durante a era do jazz.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -121,7 +123,8 @@ public class App {
 				.ano(1813)
 				.numeroPaginas(279)
 				.estilo(estiloRomance)
-				.descricao("Um clássico da literatura inglesa que retrata a sociedade do século XIX, abordando temas como amor, casamento e preconceito.")
+				.descricao(
+						"Um clássico da literatura inglesa que retrata a sociedade do século XIX, abordando temas como amor, casamento e preconceito.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -130,7 +133,8 @@ public class App {
 				.ano(1927)
 				.numeroPaginas(209)
 				.estilo(estiloModernista)
-				.descricao("Um romance modernista que explora a complexidade da mente humana e as mudanças sociais do início do século XX.")
+				.descricao(
+						"Um romance modernista que explora a complexidade da mente humana e as mudanças sociais do início do século XX.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -148,7 +152,8 @@ public class App {
 				.ano(1954)
 				.numeroPaginas(1178)
 				.estilo(estiloFantasia)
-				.descricao("Uma épica história de fantasia que se passa na Terra Média, onde um pequeno hobbit chamado Frodo embarca em uma jornada perigosa para destruir um poderoso anel.")
+				.descricao(
+						"Uma épica história de fantasia que se passa na Terra Média, onde um pequeno hobbit chamado Frodo embarca em uma jornada perigosa para destruir um poderoso anel.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -167,7 +172,8 @@ public class App {
 				.ano(1866)
 				.numeroPaginas(671)
 				.estilo(estiloSuspensePsicologico)
-				.descricao("Um clássico da literatura russa que explora a mente de um jovem estudante que comete um assassinato e lida com as consequências psicológicas de seus atos.")
+				.descricao(
+						"Um clássico da literatura russa que explora a mente de um jovem estudante que comete um assassinato e lida com as consequências psicológicas de seus atos.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -176,7 +182,8 @@ public class App {
 				.ano(1951)
 				.numeroPaginas(277)
 				.estilo(estiloClassico)
-				.descricao("Um romance que retrata a jornada de um adolescente rebelde chamado Holden Caulfield, enquanto ele lida com a alienação e a busca por significado na sociedade.")
+				.descricao(
+						"Um romance que retrata a jornada de um adolescente rebelde chamado Holden Caulfield, enquanto ele lida com a alienação e a busca por significado na sociedade.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -185,7 +192,8 @@ public class App {
 				.ano(1937)
 				.numeroPaginas(310)
 				.estilo(estiloFantasia)
-				.descricao("Uma aventura encantadora que segue Bilbo Bolseiro, um hobbit relutante, em sua jornada para ajudar um grupo de anões a recuperar seu tesouro roubado por um dragão.")
+				.descricao(
+						"Uma aventura encantadora que segue Bilbo Bolseiro, um hobbit relutante, em sua jornada para ajudar um grupo de anões a recuperar seu tesouro roubado por um dragão.")
 				.build());
 
 		livroRepository.save(Livro.builder()
@@ -194,12 +202,8 @@ public class App {
 				.ano(1988)
 				.numeroPaginas(197)
 				.estilo(estiloRomance)
-				.descricao("Uma história inspiradora sobre um jovem pastor que embarca em uma jornada em busca de seu tesouro pessoal e descobre lições valiosas sobre o significado da vida.")
+				.descricao(
+						"Uma história inspiradora sobre um jovem pastor que embarca em uma jornada em busca de seu tesouro pessoal e descobre lições valiosas sobre o significado da vida.")
 				.build());
-	}
-
-	@Bean
-	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return new BCryptPasswordEncoder();
 	}
 }
