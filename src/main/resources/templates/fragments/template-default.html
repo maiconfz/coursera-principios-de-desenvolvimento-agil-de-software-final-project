@@ -30,7 +30,10 @@
                         <a class="nav-link active" aria-current="page" th:href="@{/login}">Login</a>
                     </li>
                     <li class="nav-item" sec:authorize="isAuthenticated()">
-                        <span class="nav-link active" th:text="${#authentication.name}"></span>
+                        <div class="nav-link active">
+                            <span th:text="${#authentication.name}"></span>
+                            (<span th:text="${#authentication.principal.leitor.pontuacaoLeitura}"></span> pontos)
+                        </div>
                     </li>
                 </ul>
             </div>

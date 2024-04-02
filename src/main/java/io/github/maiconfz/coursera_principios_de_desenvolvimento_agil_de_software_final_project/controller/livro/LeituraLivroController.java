@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.repo.LeitorRepository;
 import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.repo.LivroRepository;
 import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.security.AuthenticationUtils;
+import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.utils.LeituraLivroUtils;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
@@ -21,6 +22,7 @@ public class LeituraLivroController {
     @GetMapping("/livro/marcar-como-lido/{id}")
     @Transactional
     public String marcarComoLivro(@PathVariable("id") long id, Model model, Authentication authentication) {
+        var leitorAutenticado = AuthenticationUtils.getAppUserDetails(authentication).getLeitor();
         var leitorOpt = this.leitorRepository
                 .findById(AuthenticationUtils.getAppUserDetails(authentication).getLeitor().getId());
         if (leitorOpt.isPresent()) {
@@ -28,6 +30,9 @@ public class LeituraLivroController {
             var livro = this.livroRepository.findById(id);
             if (livro.isPresent()) {
                 leitor.getLivrosLidos().add(livro.get());
+                leitor.setPontuacaoLeitura(
+                        leitor.getPontuacaoLeitura() + LeituraLivroUtils.calcularPontuacaoLeitura(livro.get()));
+                leitorAutenticado.setPontuacaoLeitura(leitor.getPontuacaoLeitura());
                 this.leitorRepository.save(leitor);
             }
         }
@@ -37,6 +42,7 @@ public class LeituraLivroController {
     @GetMapping("/livro/desmarcar-como-lido/{id}")
     @Transactional
     public String desmarcarComoLivro(@PathVariable("id") long id, Model model, Authentication authentication) {
+        var leitorAutenticado = AuthenticationUtils.getAppUserDetails(authentication).getLeitor();
         var leitorOpt = this.leitorRepository
                 .findById(AuthenticationUtils.getAppUserDetails(authentication).getLeitor().getId());
         if (leitorOpt.isPresent()) {
@@ -44,6 +50,9 @@ public class LeituraLivroController {
             var livro = this.livroRepository.findById(id);
             if (livro.isPresent()) {
                 leitor.getLivrosLidos().remove(livro.get());
+                leitor.setPontuacaoLeitura(
+                        leitor.getPontuacaoLeitura() - LeituraLivroUtils.calcularPontuacaoLeitura(livro.get()));
+                leitorAutenticado.setPontuacaoLeitura(leitor.getPontuacaoLeitura());
                 this.leitorRepository.save(leitor);
             }
         }

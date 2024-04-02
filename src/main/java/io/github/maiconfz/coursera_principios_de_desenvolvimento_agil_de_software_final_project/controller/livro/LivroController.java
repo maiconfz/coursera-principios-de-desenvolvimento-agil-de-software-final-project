@@ -25,10 +25,12 @@ public class LivroController {
 
         if (livroOpt.isPresent()) {
             var livro = livroOpt.get();
-            var leitor = leitorRepository
-                    .findById(AuthenticationUtils.getAppUserDetails(authentication).getLeitor().getId()).get();
+            var leitor = leitorRepository.findById(AuthenticationUtils.getAppUserDetails(authentication).getLeitor().getId());
 
-            livro.setLido(leitor.getLivrosLidos().contains(livro));
+            if(leitor.isPresent()) {
+                livro.setLido(leitor.get().getLivrosLidos().contains(livro));
+            }
+
             model.addAttribute("livro", livro);
             return "livro";
         } else {

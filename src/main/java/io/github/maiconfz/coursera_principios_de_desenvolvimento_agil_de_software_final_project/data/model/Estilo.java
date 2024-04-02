@@ -1,5 +1,6 @@
 package io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_software_final_project.data.model;
 
+import java.io.Serializable;
 import java.util.Optional;
 
 import jakarta.persistence.Column;
@@ -18,7 +19,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @Entity
-public class Estilo {
+public class Estilo implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

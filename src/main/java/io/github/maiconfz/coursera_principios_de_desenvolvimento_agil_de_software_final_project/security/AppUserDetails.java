@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class AppUserDetails implements UserDetails {
 
-    private final transient Leitor leitor;
+    private final Leitor leitor;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

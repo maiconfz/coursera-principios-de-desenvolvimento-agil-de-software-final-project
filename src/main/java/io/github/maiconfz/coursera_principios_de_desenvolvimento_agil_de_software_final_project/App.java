@@ -52,7 +52,7 @@ public class App {
 					.nome(name)
 					.email(name.toLowerCase() + "@gmail.com")
 					.senha(passwordEncoder.encode(name.toLowerCase()))
-					.pontos(0)
+					.pontuacaoLeitura(0)
 					.build());
 		}
 	}
