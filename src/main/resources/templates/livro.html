@@ -18,8 +18,8 @@
                             <div class="col"><h3 th:text="${livro.titulo}">Título</h3></div>
                             <div class="col text-end">
                                 <div th:switch="${livro.lido}">
-                                    <a th:case="false" class="btn btn-primary" role="button" th:href="@{/livro/marcar-como-lido/{id}(id=${livro.id})}">Marcar livro como lido</a>
-                                    <a th:case="true" class="btn btn-default" role="button" th:href="@{/livro/desmarcar-como-lido/{id}(id=${livro.id})}" title="Desmarcar livro como lido">Lido</a>
+                                    <a th:case="false" class="btn btn-success" role="button" th:href="@{/livro/marcar-como-lido/{id}(id=${livro.id})}">Marcar livro como lido</a>
+                                    <a th:case="true" class="btn btn-secondary" role="button" th:href="@{/livro/desmarcar-como-lido/{id}(id=${livro.id})}" title="Desmarcar livro como lido">Lido</a>
                                 </div>
                             </div>
                         </div>
