@@ -22,6 +22,7 @@
                                     <th scope="col">Descrição</th>
                                     <th scope="col">Autor</th>
                                     <th scope="col">Ano</th>
+                                    <th scope="col">Estilo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,6 +31,7 @@
                                     <td th:text="${livro.descricao}">Descrição</td>
                                     <td th:text="${livro.autor}">Autor do livro</td>
                                     <td th:text="${livro.ano}">Ano do livro</td>
+                                    <td th:text="${livro.estilo.nome}">Estilo do livro</td>
                                 </tr>
                             </tbody>
                         </table>

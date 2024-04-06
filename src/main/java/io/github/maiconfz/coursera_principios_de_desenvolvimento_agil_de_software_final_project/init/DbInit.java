@@ -68,7 +68,7 @@ public class DbInit {
 
         private void initTrofeus(EstiloRepository estiloRepository, TrofeuRepository trofeuRepository) {
                 estiloRepository.findAll().forEach(estilo -> trofeuRepository
-                                .save(new Trofeu(String.format("Leitor de %s", estilo.getNome()))));
+                                .save(new Trofeu(String.format("Leitor de %s", estilo.getNome()), estilo)));
         }
 
         private void initEstilos(EstiloRepository estiloRepository) {
