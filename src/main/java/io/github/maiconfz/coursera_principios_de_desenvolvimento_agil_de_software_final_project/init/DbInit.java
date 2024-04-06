@@ -69,14 +69,14 @@ public class DbInit {
 
     private void initLivros(EstiloRepository estiloRepository, LivroRepository livroRepository) {
 
-        final var estiloClassico = estiloRepository.findByNome(Estilo.EstiloEnum.CLASSICO.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloDistopico = estiloRepository.findByNome(Estilo.EstiloEnum.DISTOPICO.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloRomance = estiloRepository.findByNome(Estilo.EstiloEnum.ROMANCE.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloModernista = estiloRepository.findByNome(Estilo.EstiloEnum.MODERNISTA.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloAventura = estiloRepository.findByNome(Estilo.EstiloEnum.AVENTURA.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloFantasia = estiloRepository.findByNome(Estilo.EstiloEnum.FANTASIA.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloFiccaoHistorica = estiloRepository.findByNome(Estilo.EstiloEnum.FICCAO_HISTORICA.getNome()).orElseThrow(IllegalStateException::new);
-        final var estiloSuspensePsicologico = estiloRepository.findByNome(Estilo.EstiloEnum.SUSPENSE_PSICOLOGICO.getNome()).orElseThrow(IllegalStateException::new);
+        final var estiloClassico = estiloRepository.findByChave(Estilo.EstiloEnum.CLASSICO).orElseThrow(IllegalStateException::new);
+        final var estiloDistopico = estiloRepository.findByChave(Estilo.EstiloEnum.DISTOPICO).orElseThrow(IllegalStateException::new);
+        final var estiloRomance = estiloRepository.findByChave(Estilo.EstiloEnum.ROMANCE).orElseThrow(IllegalStateException::new);
+        final var estiloModernista = estiloRepository.findByChave(Estilo.EstiloEnum.MODERNISTA).orElseThrow(IllegalStateException::new);
+        final var estiloAventura = estiloRepository.findByChave(Estilo.EstiloEnum.AVENTURA).orElseThrow(IllegalStateException::new);
+        final var estiloFantasia = estiloRepository.findByChave(Estilo.EstiloEnum.FANTASIA).orElseThrow(IllegalStateException::new);
+        final var estiloFiccaoHistorica = estiloRepository.findByChave(Estilo.EstiloEnum.FICCAO_HISTORICA).orElseThrow(IllegalStateException::new);
+        final var estiloSuspensePsicologico = estiloRepository.findByChave(Estilo.EstiloEnum.SUSPENSE_PSICOLOGICO).orElseThrow(IllegalStateException::new);
 
         livroRepository.save(Livro.builder()
                 .titulo("O Sol é para Todos")

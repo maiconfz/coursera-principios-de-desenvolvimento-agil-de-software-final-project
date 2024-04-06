@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,6 +28,10 @@ public class Estilo implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, unique = true)
+    private EstiloEnum chave;
+
     @Column(nullable = false, unique = true)
     private String nome;
 
@@ -34,7 +40,7 @@ public class Estilo implements Serializable {
     }
 
     public static Estilo of(EstiloEnum estiloEnum) {
-        return builder().nome(estiloEnum.getNome()).build();
+        return builder().chave(estiloEnum).nome(estiloEnum.getNome()).build();
     }
 
     @AllArgsConstructor
