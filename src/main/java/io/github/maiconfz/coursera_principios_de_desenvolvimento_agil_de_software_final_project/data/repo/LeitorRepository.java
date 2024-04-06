@@ -9,4 +9,6 @@ import io.github.maiconfz.coursera_principios_de_desenvolvimento_agil_de_softwar
 public interface LeitorRepository extends JpaRepository<Leitor, Long> {
 
     public Optional<Leitor> findByEmail(String email);
+
+    public boolean existsByEmail(String email);
 }

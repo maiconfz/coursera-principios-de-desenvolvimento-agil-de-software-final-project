@@ -1,0 +1,222 @@
+[
+    {
+        "titulo": "O Sol é para Todos",
+        "autor": "Harper Lee",
+        "ano": 1960,
+        "numeroPaginas": 281,
+        "estilo": {
+            "chave": "CLASSICO"
+        },
+        "descricao": "Um clássico da literatura que aborda temas como racismo e injustiça social."
+    },
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "ano": 1949,
+        "numeroPaginas": 328,
+        "estilo": {
+            "chave": "DISTOPICO"
+        },
+        "descricao": "Uma distopia clássica que retrata um futuro sombrio e opressivo, onde a liberdade individual é suprimida."
+    },
+    {
+        "titulo": "O Grande Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "ano": 1925,
+        "numeroPaginas": 180,
+        "estilo": {
+            "chave": "CLASSICO"
+        },
+        "descricao": "Um clássico da literatura americana que retrata a decadência da sociedade durante a era do jazz."
+    },
+    {
+        "titulo": "Orgulho e Preconceito",
+        "autor": "Jane Austen",
+        "ano": 1813,
+        "numeroPaginas": 279,
+        "estilo": {
+            "chave": "ROMANCE"
+        },
+        "descricao": "Um clássico da literatura inglesa que retrata a sociedade do século XIX, abordando temas como amor, casamento e preconceito."
+    },
+    {
+        "titulo": "Ao Farol",
+        "autor": "Virginia Woolf",
+        "ano": 1927,
+        "numeroPaginas": 209,
+        "estilo": {
+            "chave": "MODERNISTA"
+        },
+        "descricao": "Um romance modernista que explora a complexidade da mente humana e as mudanças sociais do início do século XX."
+    },
+    {
+        "titulo": "Moby-Dick",
+        "autor": "Herman Melville",
+        "ano": 1851,
+        "numeroPaginas": 585,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "Um clássico da literatura que narra a história do capitão Ahab em busca da baleia branca."
+    },
+    {
+        "titulo": "O Senhor dos Anéis",
+        "autor": "J.R.R. Tolkien",
+        "ano": 1954,
+        "numeroPaginas": 1178,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "Uma épica história de fantasia que se passa na Terra Média, onde um pequeno hobbit chamado Frodo embarca em uma jornada perigosa para destruir um poderoso anel."
+    },
+    {
+        "titulo": "Guerra e Paz",
+        "autor": "Leo Tolstoy",
+        "ano": 1869,
+        "numeroPaginas": 1225,
+        "estilo": {
+            "chave": "FICCAO_HISTORICA"
+        },
+        "descricao": "Um romance histórico que retrata a vida de várias famílias aristocráticas russas durante o período das guerras napoleônicas."
+    },
+    {
+        "titulo": "Crime e Castigo",
+        "autor": "Fyodor Dostoevsky",
+        "ano": 1866,
+        "numeroPaginas": 671,
+        "estilo": {
+            "chave": "SUSPENSE_PSICOLOGICO"
+        },
+        "descricao": "Um clássico da literatura russa que explora a mente de um jovem estudante que comete um assassinato e lida com as consequências psicológicas de seus atos."
+    },
+    {
+        "titulo": "O Apanhador no Campo de Centeio",
+        "autor": "J.D. Salinger",
+        "ano": 1951,
+        "numeroPaginas": 277,
+        "estilo": {
+            "chave": "CLASSICO"
+        },
+        "descricao": "Um romance que retrata a jornada de um adolescente rebelde chamado Holden Caulfield, enquanto ele lida com a alienação e a busca por significado na sociedade."
+    },
+    {
+        "titulo": "O Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "ano": 1937,
+        "numeroPaginas": 310,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "Uma aventura encantadora que segue Bilbo Bolseiro, um hobbit relutante, em sua jornada para ajudar um grupo de anões a recuperar seu tesouro roubado por um dragão."
+    },
+    {
+        "titulo": "O Alquimista",
+        "autor": "Paulo Coelho",
+        "ano": 1988,
+        "numeroPaginas": 197,
+        "estilo": {
+            "chave": "ROMANCE"
+        },
+        "descricao": "Uma história inspiradora sobre um jovem pastor que embarca em uma jornada em busca de seu tesouro pessoal e descobre lições valiosas sobre o significado da vida."
+    },
+    {
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "autor": "J.K. Rowling",
+        "ano": 1997,
+        "numeroPaginas": 223,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "O primeiro livro da série Harry Potter, que conta a história de um jovem bruxo e suas aventuras na escola de magia e bruxaria de Hogwarts."
+    },
+    {
+        "titulo": "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa",
+        "autor": "C.S. Lewis",
+        "ano": 1950,
+        "numeroPaginas": 206,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "O primeiro livro da série As Crônicas de Nárnia, que transporta os leitores para um mundo mágico cheio de criaturas fantásticas e aventuras emocionantes."
+    },
+    {
+        "titulo": "Percy Jackson e o Ladrão de Raios",
+        "autor": "Rick Riordan",
+        "ano": 2005,
+        "numeroPaginas": 375,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "O primeiro livro da série Percy Jackson e os Olimpianos, que segue as aventuras de um jovem semideus e seus amigos enquanto lutam contra criaturas mitológicas e descobrem segredos antigos."
+    },
+    {
+        "titulo": "O Nome do Vento",
+        "autor": "Patrick Rothfuss",
+        "ano": 2007,
+        "numeroPaginas": 662,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "O primeiro livro da trilogia Crônica do Matador do Rei, que narra a história de Kvothe, um músico e mago talentoso, enquanto ele busca vingança e desvenda os mistérios do mundo."
+    },
+    {
+        "titulo": "A Guerra dos Tronos",
+        "autor": "George R.R. Martin",
+        "ano": 1996,
+        "numeroPaginas": 694,
+        "estilo": {
+            "chave": "FANTASIA"
+        },
+        "descricao": "O primeiro livro da série As Crônicas de Gelo e Fogo, que apresenta um mundo medieval repleto de intriga política, batalhas épicas e criaturas míticas."
+    },
+    {
+        "titulo": "A Ilha do Tesouro",
+        "autor": "Robert Louis Stevenson",
+        "ano": 1883,
+        "numeroPaginas": 366,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "Um clássico da literatura de aventura que segue as peripécias do jovem Jim Hawkins em busca de um tesouro enterrado em uma ilha remota."
+    },
+    {
+        "titulo": "Viagem ao Centro da Terra",
+        "autor": "Jules Verne",
+        "ano": 1864,
+        "numeroPaginas": 183,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "Uma emocionante história de aventura que acompanha uma expedição científica que desce ao centro da Terra através de uma cratera vulcânica."
+    },
+    {
+        "titulo": "A Volta ao Mundo em 80 Dias",
+        "autor": "Jules Verne",
+        "ano": 1873,
+        "numeroPaginas": 256,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "Um clássico da literatura de viagem que segue as aventuras de Phileas Fogg enquanto ele tenta dar a volta ao mundo em 80 dias para ganhar uma aposta."
+    },
+    {
+        "titulo": "Aventuras de Tom Sawyer",
+        "autor": "Mark Twain",
+        "ano": 1876,
+        "numeroPaginas": 224,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "Um livro que retrata as travessuras e aventuras do jovem Tom Sawyer em uma pequena cidade do interior dos Estados Unidos."
+    },
+    {
+        "titulo": "Aventuras de Huckleberry Finn",
+        "autor": "Mark Twain",
+        "ano": 1884,
+        "numeroPaginas": 366,
+        "estilo": {
+            "chave": "AVENTURA"
+        },
+        "descricao": "A continuação das aventuras de Tom Sawyer, que segue as peripécias do jovem Huckleberry Finn enquanto ele foge de casa e embarca em uma jornada pelo rio Mississippi."
+    }
+]
