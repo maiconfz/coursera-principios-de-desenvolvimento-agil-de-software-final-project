@@ -42,7 +42,7 @@ public class LeituraLivroController {
 
                 this.leitorRepository.save(leitor);
 
-                if (leitorRepository.countByLivrosLidosEstilo(livro.get().getEstilo()) >= 5) {
+                if (leitorRepository.countByLivrosLidosEstilo(livro.get().getEstilo()) == 5) {
                     final Trofeu trofeu = this.trofeuRepository.findByEstilo(livro.get().getEstilo());
 
                     log.info("Leitor {} ganhou o troféu {}", leitor.getNome(), trofeu.getNome());
