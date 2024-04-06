@@ -39,7 +39,26 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h2 class="text-center mb-4">Ranking</h2>
+                <h2 class="text-center mb-4">Ranking leitores</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <caption hidden>Tabela de ranking de leitores</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Pontuação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="leitor : ${rankingLeitores}">
+                                    <td th:text="${leitor.nome}">Nome leitor</td>
+                                    <td th:text="${leitor.pontuacaoLeitura}">Pontuação de leitura</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
