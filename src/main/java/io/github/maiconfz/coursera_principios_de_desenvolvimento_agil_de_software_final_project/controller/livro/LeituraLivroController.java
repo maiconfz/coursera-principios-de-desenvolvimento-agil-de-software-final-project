@@ -40,16 +40,15 @@ public class LeituraLivroController {
                         leitor.getPontuacaoLeitura() + LeituraLivroUtils.calcularPontuacaoLeitura(livro.get()));
                 leitorAutenticado.setPontuacaoLeitura(leitor.getPontuacaoLeitura());
 
-                this.leitorRepository.save(leitor);
-
                 if (leitorRepository.countByLivrosLidosEstilo(livro.get().getEstilo()) == 5) {
                     final Trofeu trofeu = this.trofeuRepository.findByEstilo(livro.get().getEstilo());
 
                     log.info("Leitor {} ganhou o troféu {}", leitor.getNome(), trofeu.getNome());
 
                     leitor.getTrofeusConquistados().add(this.trofeuRepository.findByEstilo(livro.get().getEstilo()));
-                    this.leitorRepository.save(leitor);
                 }
+
+                this.leitorRepository.save(leitor);
             }
         }
         return "redirect:/livro/" + id;
