@@ -48,12 +48,14 @@
                                 <tr>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Pontuação</th>
+                                    <th scope="col">Troféus</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr th:each="leitor : ${rankingLeitores}">
                                     <td th:text="${leitor.nome}">Nome leitor</td>
                                     <td th:text="${leitor.pontuacaoLeitura}">Pontuação de leitura</td>
+                                    <td th:text="${leitor.trofeusConquistados != null ? leitor.trofeusConquistados.size() : 0}">Pontuação de leitura</td>
                                 </tr>
                             </tbody>
                         </table>

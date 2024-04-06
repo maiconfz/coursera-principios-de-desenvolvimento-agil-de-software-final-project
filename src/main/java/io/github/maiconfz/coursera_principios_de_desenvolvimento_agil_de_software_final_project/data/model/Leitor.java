@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,7 +33,7 @@ public class Leitor implements Serializable {
     @JoinTable(name = "leitor_livros_lidos")
     private List<Livro> livrosLidos;
     private long pontuacaoLeitura;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "leitor_trofeu")
     private List<Trofeu> trofeusConquistados;
 
